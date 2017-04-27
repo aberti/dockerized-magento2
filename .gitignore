@@ -1,2 +1,4 @@
-/composer.env
-/magento
+/env/composer.env
+/env/overrides.env
+data/magento
+data/mysql
