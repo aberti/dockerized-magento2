@@ -11,6 +11,16 @@ case "$1" in
     docker-compose logs -f
   ;;
 
+  "magerun")
+    docker-compose run --rm cli magento-command "${@:2}"
+  ;;
+
+  "flush")
+    docker-compose run --rm cli magento-command cache:flush
+    docker-compose run --rm cli magento-command cache:clear
+    docker-compose restart varnish
+  ;;
+
   "stop")
     docker-compose stop
   ;;

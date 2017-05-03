@@ -11,6 +11,8 @@ services:
     env_file:
       - env/vhost.env
       - env/overrides.env
+    volumes:
+      - ./data/varnish.vcl:/data/varnish.vcl
 
   web:
     image: meanbee/magento2-nginx:1.9
