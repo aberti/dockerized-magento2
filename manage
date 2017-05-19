@@ -17,7 +17,7 @@ case "$1" in
 
   "flush")
     docker-compose run --rm cli magento-command cache:flush
-    docker-compose run --rm cli magento-command cache:clear
+    docker-compose run --rm cli magento-command cache:clean
     docker-compose restart varnish
   ;;
 
